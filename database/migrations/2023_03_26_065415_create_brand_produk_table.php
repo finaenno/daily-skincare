@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kategori_produk', function (Blueprint $table) {
-            $table->bigIncrements('id_kategori_produk');
-            $table->string('title_kategori_produk');
+        Schema::create('brand_produk', function (Blueprint $table) {
+            $table->bigIncrements('id_brand_produk');
+            $table->string('title_brand_produk');
         });
     }
 
@@ -22,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('kategori_produk');
+        Schema::dropIfExists('brand_produk');
     }
 };

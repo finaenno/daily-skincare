@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 // use Illuminate\Http\Response;
 use App\Models\ItemProduk;
 use App\Models\KategoriProduk;
+use App\Models\BrandProduk;
 use Illuminate\Support\Facades\DB;
 
 class ItemProdukController extends Controller
@@ -49,7 +50,8 @@ class ItemProdukController extends Controller
             'nama_produk',
             'deskripsi_produk',
             'harga_produk',
-            'id_kategori_produk'
+            'id_kategori_produk',
+            'id_brand_produk'
         ]);
 
         $itemProduk = new ItemProduk;
@@ -57,6 +59,7 @@ class ItemProdukController extends Controller
         $itemProduk->deskripsi_produk = $request->input('deskripsi_produk');
         $itemProduk->harga_produk = $request->input('harga_produk');
         $itemProduk->id_kategori_produk = $request->input('id_kategori_produk');
+        $itemProduk->id_brand_produk = $request->input('id_brand_produk');
 
         $itemProduk->save();
 
@@ -96,7 +99,8 @@ class ItemProdukController extends Controller
             'nama_produk',
             'deskripsi_produk',
             'harga_produk',
-            'id_kategori_produk'
+            'id_kategori_produk',
+            'id_brand_produk'
         ]);
 
         $itemProduk = ItemProduk::find($id);
@@ -104,6 +108,7 @@ class ItemProdukController extends Controller
         $itemProduk->deskripsi_produk = $request->input('deskripsi_produk');
         $itemProduk->harga_produk = $request->input('harga_produk');
         $itemProduk->id_kategori_produk = $request->input('id_kategori_produk');
+        $itemProduk->id_brand_produk = $request->input('id_brand_produk');
 
         $itemProduk->save();
 

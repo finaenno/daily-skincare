@@ -18,10 +18,14 @@ class ItemProduk extends Model
         'nama_produk',
         'deskripsi_produk',
         'harga_produk',
-        'id_kategori_produk'
+        'id_kategori_produk',
+        'id_brand_produk'
     ];
 
     public function kategori_produk(){
         return $this->belongsTo(KategoriProduk::class, 'id_kategori_produk', 'id_kategori_produk');
+    }
+    public function brand_produk(){
+        return $this->belongsTo(BrandProduk::class, 'id_brand_produk', 'id_brand_produk');
     }
 }

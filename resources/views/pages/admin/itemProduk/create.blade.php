@@ -22,7 +22,14 @@
                 <option value="{{$item->id_kategori_produk}}">{{$item->title_kategori_produk}}</option>
             @endforeach
         </select>
-
+    </div>
+    <div class="form-group mt-3">
+        <label for="name">Brand Produk</label>
+        <select class="form-select" aria-label="Default select example" name="kategori_produk" id="kategori_produk">
+            @foreach ($brandProduk as $item)
+                <option value="{{$item->id_brand_produk}}">{{$item->title_brand_produk}}</option>
+            @endforeach
+        </select>
     </div>
     <div class="text-center"><button type="submit">Simpan</button></div>
 </form>
