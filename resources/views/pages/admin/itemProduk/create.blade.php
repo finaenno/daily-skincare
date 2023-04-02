@@ -1,5 +1,14 @@
-<h1>Menambahkan Produk</h1>
+@extends('layouts.admin')
 
+@section('title')
+    Menambahkan Item Produk
+@endsection
+
+@section('section-title')
+    <h2>Menambahkan Item Produk</h2>
+@endsection
+
+@section('content')
 <form action="{{route('itemProduk.store')}}" method="POST">
     @csrf
     @method('POST')
@@ -31,5 +40,7 @@
             @endforeach
         </select>
     </div>
+    <br>
     <div class="text-center"><button type="submit">Simpan</button></div>
 </form>
+@endsection

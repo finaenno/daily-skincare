@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\KategoriProdukAdminController;
 use App\Http\Controllers\Admin\ItemProdukController;
+use App\Http\Controllers\Admin\BrandProdukAdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +23,12 @@ Route::prefix('kategoriProduk')->name('kategoriProduk.')->group(function () {
     Route::get('/', [KategoriProdukAdminController::class, 'index'])->name('index');
     Route::get('/create', [KategoriProdukAdminController::class, 'create'])->name('create');
     Route::post('/store', [KategoriProdukAdminController::class,'store'])->name('store');
+});
+
+Route::prefix('brandProduk')->name('brandProduk.')->group(function () {
+    Route::get('/', [BrandProdukAdminController::class, 'index'])->name('index');
+    Route::get('/create', [BrandProdukAdminController::class, 'create'])->name('create');
+    Route::post('/store', [BrandProdukAdminController::class,'store'])->name('store');
 });
 
 Route::prefix('itemProduk')->name('itemProduk.')->group(function(){

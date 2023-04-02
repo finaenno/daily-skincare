@@ -35,9 +35,11 @@ class ItemProdukController extends Controller
         //     ->select('kategori_produk.title_kategori_produk', 'item_produk.id_kategori_produk')
         //     ->get();
         $kategoriProduk = KategoriProduk::all();
+        $brandProduk = BrandProduk::all();
 
         return view('pages.admin.ItemProduk.create',[
-            'kategoriProduk' => $kategoriProduk
+            'kategoriProduk' => $kategoriProduk,
+            'brandProduk' => $brandProduk
         ]);
     }
 

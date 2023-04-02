@@ -1,5 +1,14 @@
-<h1>Mengedit Produk</h1>
+@extends('layouts.admin')
 
+@section('title')
+    Mengedit Item Produk
+@endsection
+
+@section('section-title')
+    <h2>Mengedit Item Produk</h2>
+@endsection
+
+@section('content')
 <form action="{{route('itemProduk.update'), $itemProduk->id_produk}}" method="POST">
     @csrf
     @method('PUT')
@@ -33,3 +42,4 @@
     </div>
     <div class="text-center"><button type="submit">Simpan</button></div>
 </form>
+@endsection

@@ -1,20 +1,20 @@
 @extends('layouts.admin')
 
 @section('title')
-    Menambahkan Kategori Produk
+    Menambahkan Brand Produk
 @endsection
 
 @section('section-title')
-<h2>Menambahkan Kategori Produk</h2>
+<h2>Menambahkan Brand Produk</h2>
 @endsection
 
 @section('content')
-            <form action="{{route('kategoriProduk.store')}}" method="POST">
+            <form action="{{route('brandProduk.store')}}" method="POST">
                 @csrf
                 @method('POST')
                 <div class="form-group mt-3">
-                    <label for="name">Kategori Produk</label>
-                    <input type="text" class="form-control" name="title_kategori_produk" id="title_kategori_produk" required>
+                    <label for="name">Brand Produk</label>
+                    <input type="text" class="form-control" name="title_brand_produk" id="title_brand_produk" required>
                 </div>
                 <br>
                 <div class="text-center"><button type="submit">Simpan</button></div>
