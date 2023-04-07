@@ -7,6 +7,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Models\BrandProduk;
+use App\Models\KategoriProduk;
 
 class BrandProdukAdminController extends Controller
 {
@@ -16,8 +17,10 @@ class BrandProdukAdminController extends Controller
     public function index(): Response
     {
         $brandProduk = BrandProduk::all();
+        $kategoriProduk = KategoriProduk::all();
 
         return view('pages.admin.brandProduk.index',[
+            'kategoriProduk' => $kategoriProduk,
             'brandProduk' => $brandProduk
         ]);
     }
@@ -27,7 +30,13 @@ class BrandProdukAdminController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.brandProduk.create');
+        $brandProduk = BrandProduk::all();
+        $kategoriProduk = KategoriProduk::all();
+
+        return view('pages.admin.brandProduk.create', [
+            'kategoriProduk' => $kategoriProduk,
+            'brandProduk' => $brandProduk
+        ]);
     }
 
     /**

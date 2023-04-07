@@ -1,12 +1,12 @@
 @extends('layouts.admin')
 
 @section('kategoriProduk')
-<ul>
+{{-- <ul>
   @foreach ($kategoriProduk as $item)
   <li><a class="nav-link scrollto" href="#">{{$item->title_kategori_produk}}</a></li>
   @endforeach
   <li><a class="nav-link scrollto" href="/kategoriProduk/create">(+) Kategori Baru</a></li>
-</ul>
+</ul> --}}
 @endsection
 
 @section('konten')

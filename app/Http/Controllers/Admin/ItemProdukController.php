@@ -19,9 +19,13 @@ class ItemProdukController extends Controller
     public function index()
     {
         $itemProduk = ItemProduk::all();
+        $kategoriProduk = KategoriProduk::all();
+        $brandProduk = BrandProduk::all();
 
         return view('pages.admin.itemProduk.index',[
-            'itemProduk' => $itemProduk
+            'itemProduk' => $itemProduk,
+            'kategoriProduk' => $kategoriProduk,
+            'brandProduk' => $brandProduk
         ]);
     }
 

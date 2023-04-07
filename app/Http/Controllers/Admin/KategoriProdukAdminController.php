@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 //use Illuminate\Http\Response;
 use App\Models\KategoriProduk;
+use App\Models\BrandProduk;
 
 class KategoriProdukAdminController extends Controller
 {
@@ -16,9 +17,11 @@ class KategoriProdukAdminController extends Controller
     public function index()
     {
         $kategoriProduk = KategoriProduk::all();
+        $brandProduk = BrandProduk::all();
 
         return view('pages.admin.kategoriProduk.index', [
-            'kategoriProduk' => $kategoriProduk
+            'kategoriProduk' => $kategoriProduk,
+            'brandProduk' => $brandProduk
         ]);
     }
 
@@ -27,7 +30,13 @@ class KategoriProdukAdminController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.kategoriProduk.create');
+        $kategoriProduk = KategoriProduk::all();
+        $brandProduk = BrandProduk::all();
+
+        return view('pages.admin.kategoriProduk.create', [
+            'kategoriProduk' => $kategoriProduk,
+            'brandProduk' => $brandProduk
+        ]);
     }
 
     /**

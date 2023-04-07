@@ -48,25 +48,10 @@
       </div>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li class="dropdown"><a href="#"><span>Kategori</span> <i class="bi bi-chevron-down"></i></a>
-            {{-- <ul>
-              @foreach($kategoriProduk as $item)
-              <li><a class="nav-link scrollto" href="#">{{$item->title_kategori_produk}}</a></li>
-              @endforeach
-              <li><a class="nav-link scrollto" href="/kategoriProduk/create">(+) Kategori Baru</a></li>
-            </ul> --}}
-            @yield('kategoriProduk')
-          </li>
-          <li><a class="nav-link scrollto" href="/itemProduk/">Produk</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        @include('layouts.parts.navbar')
       </nav><!-- .navbar -->
 
+      <i class="bi bi-list mobile-nav-toggle"></i>
       <div class="header-social-links d-flex align-items-center">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
