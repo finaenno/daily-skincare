@@ -1,86 +1,50 @@
 @extends('layouts.admin')
 
-@section('kategoriProduk')
-{{-- <ul>
-  @foreach ($kategoriProduk as $item)
-  <li><a class="nav-link scrollto" href="#">{{$item->title_kategori_produk}}</a></li>
-  @endforeach
-  <li><a class="nav-link scrollto" href="/kategoriProduk/create">(+) Kategori Baru</a></li>
-</ul> --}}
+@section('title')
+    Daily Skincare
 @endsection
 
-@section('konten')
-
- {{-- <!-- ======= Header ======= -->
- <header id="header" class="fixed-top d-flex align-items-center">
-  <div class="container d-flex align-items-center">
-
-    <div class="logo me-auto">
-      <h1><a href="index.html">Daily Skincare</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-    </div>
-
-    <nav id="navbar" class="navbar order-last order-lg-0">
-      <ul>
-        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-        <li class="dropdown"><a href="#"><span>Kategori</span> <i class="bi bi-chevron-down"></i></a>
-          <ul>
-            @foreach ($kategoriProduk as $item)
-            <li><a class="nav-link scrollto" href="#">{{$item->title_kategori_produk}}</a></li>
-            @endforeach
-            <li><a class="nav-link scrollto" href="/kategoriProduk/create">(+) Kategori Baru</a></li>
-          </ul>
-        </li>
-        <li><a class="nav-link scrollto" href="#services">Produk</a></li>
-        <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-        <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
-        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->
-
-    <div class="header-social-links d-flex align-items-center">
-      <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-    </div>
-
-  </div>
-</header><!-- End Header --> --}}
-
+@section('content')
 <body>
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
-          <div>
-            <h1>We design digital products that help grow businesses</h1>
-            <h2>We are team of talented designers making websites with Bootstrap</h2>
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+    <section id="hero-slider" class="d-flex justify-cntent-center align-items-center">
+      <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+  
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="carousel-container">
+            <img src="assets/img/portfolio-details-1.jpg" class="" alt="">
           </div>
         </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
-          <img src="assets/img/hero-img.png" class="img-fluid" alt="">
+  
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="carousel-container">
+            <img src="assets/img/portfolio-details-2.jpg" class="" alt="">
+          </div>
         </div>
+  
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="carousel-container">
+            <img src="assets/img/portfolio-details-3.jpg" class="" alt="">
+          </div>
+        </div>
+  
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+        </a>
+  
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+        </a>
+  
       </div>
-    </div>
-
-  </section><!-- End Hero -->
-
+    </section><!-- End Hero -->
   <main id="main">
-
-    <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container">
 
         <div class="row">
-          <div class="col-lg-6" data-aos="zoom-in">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
-          </div>
           <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
             <div class="content pt-4 pt-lg-0">
               <h3>Learn more about us</h3>
@@ -98,119 +62,44 @@
               </p>
             </div>
           </div>
+          <div class="col-lg-6" data-aos="zoom-in">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
         </div>
 
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
+    <section id="keunggulan" class="keunggulan">
       <div class="container">
-
         <div class="row">
-          <div class="col-lg-6 mt-2 mb-tg-0 order-2 order-lg-1">
-            <ul class="nav nav-tabs flex-column">
-              <li class="nav-item" data-aos="fade-up">
-                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
-                  <h4>Modi sit est</h4>
-                  <p>Quis excepturi porro totam sint earum quo nulla perspiciatis eius.</p>
-                </a>
-              </li>
-              <li class="nav-item mt-2" data-aos="fade-up" data-aos-delay="100">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
-                  <h4>Unde praesentium sed</h4>
-                  <p>Voluptas vel esse repudiandae quo excepturi.</p>
-                </a>
-              </li>
-              <li class="nav-item mt-2" data-aos="fade-up" data-aos-delay="200">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
-                  <h4>Pariatur explicabo vel</h4>
-                  <p>Velit veniam ipsa sit nihil blanditiis mollitia natus.</p>
-                </a>
-              </li>
-              <li class="nav-item mt-2" data-aos="fade-up" data-aos-delay="300">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
-                  <h4>Nostrum qui quasi</h4>
-                  <p>Ratione hic sapiente nostrum doloremque illum nulla praesentium id</p>
-                </a>
-              </li>
-            </ul>
+        <div class="col-lg-10 d-flex ">
+          <div class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+          <img src="{{asset('assets/img/keunggulan_1.png')}}" alt="" class="img-fluid" width="180" >
           </div>
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
-            <div class="tab-content">
-              <div class="tab-pane active show" id="tab-1">
-                <figure>
-                  <img src="assets/img/features-1.png" alt="" class="img-fluid">
-                </figure>
-              </div>
-              <div class="tab-pane" id="tab-2">
-                <figure>
-                  <img src="assets/img/features-2.png" alt="" class="img-fluid">
-                </figure>
-              </div>
-              <div class="tab-pane" id="tab-3">
-                <figure>
-                  <img src="assets/img/features-3.png" alt="" class="img-fluid">
-                </figure>
-              </div>
-              <div class="tab-pane" id="tab-4">
-                <figure>
-                  <img src="assets/img/features-4.png" alt="" class="img-fluid">
-                </figure>
-              </div>
+          <div class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+            <img src="{{asset('assets/img/keunggulan_2.png')}}" alt="" class="img-fluid" width="180" >
+          </div>
+          <div class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+            <img src="{{asset('assets/img/keunggulan_3.png')}}" alt="" class="img-fluid" width="180" >
             </div>
+            <div class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+              <img src="{{asset('assets/img/keunggulan_4.png')}}" alt="" class="img-fluid" width="180" >
+              </div>
+              <div class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                <img src="{{asset('assets/img/keunggulan_5.png')}}" alt="" class="img-fluid" width="180" >
+                </div>
+                <div class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                  <img src="{{asset('assets/img/keunggulan_6.png')}}" alt="" class="img-fluid" width="180" >
+                  </div>
+                  <div class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <img src="{{asset('assets/img/keunggulan_7.png')}}" alt="" class="img-fluid" width="180" >
+                    </div>
           </div>
         </div>
-
       </div>
-    </section><!-- End Features Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in">
-            <div class="icon-box icon-box-pink">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box icon-box-cyan">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box icon-box-green">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box icon-box-blue">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
+    </section>
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
@@ -364,7 +253,7 @@
 
       </div>
     </section><!-- End Portfolio Section -->
-
+{{-- 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
       <div class="container">
@@ -380,9 +269,9 @@
         </div>
 
       </div>
-    </section><!-- End Cta Section -->
+    </section><!-- End Cta Section --> --}}
 
-    <!-- ======= Testimonials Section ======= -->
+    {{-- <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
       <div class="container">
 
@@ -464,14 +353,14 @@
         </div>
 
       </div>
-    </section><!-- End Testimonials Section -->
+    </section><!-- End Testimonials Section --> --}}
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team">
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>Team</h2>
+          <h2>Testimonials</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
@@ -479,48 +368,27 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in">
-              <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/testimonials/testimonials.jpeg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/testimonials/testimonials.jpeg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <h4>Walter White</h4>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/testimonials/testimonials.jpeg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <h4>Walter White</h4>
               </div>
             </div>
           </div>
@@ -594,7 +462,7 @@
       </div>
     </section><!-- End Clients Section -->
 
-    <!-- ======= Pricing Section ======= -->
+    {{-- <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing section-bg">
       <div class="container">
 
@@ -677,7 +545,7 @@
         </div>
 
       </div>
-    </section><!-- End Pricing Section -->
+    </section><!-- End Pricing Section --> --}}
 
     <!-- ======= F.A.Q Section ======= -->
     <section id="faq" class="faq">

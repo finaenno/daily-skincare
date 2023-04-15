@@ -43,8 +43,8 @@
       <div class="logo me-auto">
         {{-- <h1><a href="index.html">Daily Skincare</a></h1> --}}
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.html"><img src="{{asset('assets/img/logo.jpg')}}" alt="" class="img-fluid"></a>
-        <a href="index.html"><img src="{{asset('assets/img/logo-title.jpg')}}" alt="" class="img-fluid"></a>
+        <a href="/"><img src="{{asset('assets/img/logo.jpg')}}" alt="" class="img-fluid"></a>
+        <a href="/"><img src="{{asset('assets/img/logo-title.jpg')}}" alt="" class="img-fluid"></a>
       </div>
 
       <nav id="navbar" class="navbar order-last order-lg-0">

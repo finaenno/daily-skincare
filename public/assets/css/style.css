@@ -134,6 +134,133 @@ h6 {
 .header-social-links a:hover {
   color: #009cea;
 }
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero-slider {
+  /* left: 0; */
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
+  margin-top:-15%;
+}
+
+#hero-slider .carousel-item .carousel-container img{
+  width: 100%;
+  height: 90vh;
+}
+
+#hero-slider::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 130%;
+  height: 95%;
+  /* background: linear-gradient(to right, rgba(30, 67, 86, 0.8), rgba(30, 67, 86, 0.6)), url("../img/hero-bg.jpg") center top no-repeat; */
+  z-index: 0;
+  border-radius: 0 0 50% 50%;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+#hero-slider::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 130%;
+  height: 96%;
+  /* background: #68A4C4; */
+  opacity: 0.3;
+  z-index: 0;
+  border-radius: 0 0 50% 50%;
+  transform: translateX(-50%) translateY(18px) rotate(2deg);
+}
+
+#hero-slider .carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero-slider .carousel-control-prev,
+#hero-slider .carousel-control-next {
+  width: 10%;
+}
+
+#hero-slider .carousel-control-next-icon,
+#hero-slider .carousel-control-prev-icon {
+  background: grey;
+  font-size: 40px;
+  line-height: 1;
+  width: auto;
+  height: auto;
+  border:2px solid whitesmoke;
+  border-radius: 50%;
+  margin-top:110%;
+}
+
+#hero-slider .carousel-control-next-icon{
+  margin-right: 30%;
+}
+
+#hero-slider .carousel-control-prev-icon{
+  margin-left: 30%;
+}
+
+
+@media (min-width: 1024px) {
+
+  #hero-slider .carousel-control-prev,
+  #hero-slider .carousel-control-next {
+    width: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero-slider::after {
+    width: 180%;
+    height: 95%;
+    border-radius: 0 0 50% 50%;
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  #hero-slider::before {
+    top: 0;
+    width: 180%;
+    height: 94%;
+    border-radius: 0 0 50% 50%;
+    transform: translateX(-50%) translateY(20px) rotate(4deg);
+  }
+}
+
+@media (max-width: 575px) {
+
+  #hero-slider::after {
+    left: 40%;
+    top: 0;
+    width: 200%;
+    height: 95%;
+    border-radius: 0 0 50% 50%;
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  #hero-slider::before {
+    left: 50%;
+    top: 0;
+    width: 200%;
+    height: 94%;
+    border-radius: 0 0 50% 50%;
+    transform: translateX(-50%) translateY(20px) rotate(4deg);
+  }
+}
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -362,7 +489,7 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  background-image: url("../img/hero-bg.png");
+  /* background-image: url("../img/hero-bg.png"); */
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right top;
@@ -466,7 +593,7 @@ section {
 }
 
 .about .container {
-  background-color: #f7f8f9;
+  /* background-color: #f7f8f9; */
   padding: 60px 50px;
 }
 
@@ -985,7 +1112,7 @@ section {
 # Team
 --------------------------------------------------------------*/
 .team {
-  background: url("../img/team-bg.jpg") center center no-repeat;
+  background: #d8dee1 center center no-repeat;
   background-size: cover;
   padding: 60px 0;
   position: relative;
@@ -1015,6 +1142,8 @@ section {
 
 .team .member .pic {
   overflow: hidden;
+  width: 100%;
+  height: 65vh;
 }
 
 .team .member .member-info {
