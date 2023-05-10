@@ -19,7 +19,8 @@ class ItemProduk extends Model
         'deskripsi_produk',
         'harga_produk',
         'id_kategori_produk',
-        'id_brand_produk'
+        'id_brand_produk',
+        // 'id_image'
     ];
 
     public function kategori_produk(){
@@ -28,4 +29,7 @@ class ItemProduk extends Model
     public function brand_produk(){
         return $this->belongsTo(BrandProduk::class, 'id_brand_produk', 'id_brand_produk');
     }
+    // public function image(){
+    //     return $this->hasMany(Image::class, 'id_image', 'id_image');
+    // }
 }

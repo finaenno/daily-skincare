@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\ItemProduk;
 use App\Models\KategoriProduk;
 use App\Models\BrandProduk;
+use App\Models\Image;
 use Illuminate\Support\Facades\DB;
 
 class ItemProdukController extends Controller
@@ -40,10 +41,12 @@ class ItemProdukController extends Controller
         //     ->get();
         $kategoriProduk = KategoriProduk::all();
         $brandProduk = BrandProduk::all();
+        $image = Image::all();
 
         return view('pages.admin.ItemProduk.create',[
             'kategoriProduk' => $kategoriProduk,
-            'brandProduk' => $brandProduk
+            'brandProduk' => $brandProduk,
+            'image' => $image
         ]);
     }
 
@@ -57,19 +60,65 @@ class ItemProdukController extends Controller
             'deskripsi_produk',
             'harga_produk',
             'id_kategori_produk',
-            'id_brand_produk'
+            'id_brand_produk',
+            // 'id_image'
         ]);
 
-        $itemProduk = new ItemProduk;
-        $itemProduk->nama_produk = $request->input('nama_produk');
-        $itemProduk->deskripsi_produk = $request->input('deskripsi_produk');
-        $itemProduk->harga_produk = $request->input('harga_produk');
-        $itemProduk->id_kategori_produk = $request->input('id_kategori_produk');
-        $itemProduk->id_brand_produk = $request->input('id_brand_produk');
+        // $itemProduk = new ItemProduk;
+        // $itemProduk->nama_produk = $request->input('nama_produk');
+        // $itemProduk->deskripsi_produk = $request->input('deskripsi_produk');
+        // $itemProduk->harga_produk = $request->input('harga_produk');
+        // $itemProduk->id_kategori_produk = $request->input('id_kategori_produk');
+        // $itemProduk->id_brand_produk = $request->input('id_brand_produk');
 
-        $itemProduk->save();
+        // $itemProduk->save();
 
-        return redirect(route('itemProduk.index'));
+        // $itemProduk = ItemProduk::create([
+        //     'nama_produk' => $request->nama_produk,
+        //     'deskripsi_produk' => $request->deskripsi_produk,
+        //     'harga_produk' => $request->harga_produk,
+        //     'id_kategori_produk' => $request->id_kategori_produk,
+        //     'id_brand_produk' => $request->id_brand_produk,
+        //     // 'id_image' => $request->id_image
+        // ]);
+
+        // $image = Image::create([
+        //     'nama_image' => $request-> nama_image,
+        //     'id_produk' => $request->id_produk
+        // ]);
+
+        $itemProduk = DB::beginTransaction();
+
+        try{
+            $insertItemProduk = DB::table('item_produk')->insert([
+                'nama_produk' => $request->nama_produk,
+                'deskripsi_produk' => $request->deskripsi_produk,
+                'harga_produk' => $request->harga_produk,
+                'id_kategori_produk' => $request->id_kategori_produk,
+                'id_brand_produk' => $request->id_brand_produk,                
+            ]);
+
+            $insertItemProduk->save();
+
+            $insertImage = DB::table('image')->insert([
+                'nama_image' => $request->nama_image,
+                'id_produk' => ItemProduk::get('id_produk')
+            ]);
+
+            $insertImage->save();
+
+            DB::commit();
+
+            return redirect(route('itemProduk.index'));
+        }catch(Exception $e){
+            DB::rollback();
+            //throw $e;
+            return redirect()->back()
+
+            ->with('warning','Something Went Wrong!');
+        }
+
+        // return redirect(route('itemProduk.index'));
     }
 
     /**

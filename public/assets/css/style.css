@@ -83,6 +83,7 @@ h6 {
   z-index: 997;
   transition: all 0.5s;
   background: #fff;
+  /* background : #ffedd0; */
 }
 
 #header.header-scrolled {
@@ -140,16 +141,36 @@ h6 {
 #hero-slider {
   /* left: 0; */
   width: 100%;
-  height: 90vh;
+  min-height: 90vh;
   overflow: hidden;
   position: relative;
   margin-top:-15%;
 }
 
-#hero-slider .carousel-item .carousel-container img{
+.carousel-container img{
   width: 100%;
-  height: 90vh;
+  height: 80vh;
 }
+
+.carousel-container{
+  /* height: 170px; */
+  overflow: hidden;
+  /* margin: 10px; */
+  position: relative;
+  min-height: 90vh;
+  width: 100%;
+}
+
+/* .carousel-container img{
+  position: absolute;
+  left: -1000%;
+  right: -1000%;
+  top: -1000%;
+  bottom: -1000%;
+  margin: auto;
+  min-height: 100%;
+  min-width: 100%;
+} */
 
 #hero-slider::after {
   content: "";
@@ -984,15 +1005,21 @@ section {
   padding: 80px 0;
 }
 
-.cta h3 {
+.cta .container .row{
+  position: relative;
+}
+
+
+.cta h2 {
   color: #364146;
   font-size: 28px;
   font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
 }
 
-.cta p {
-  color: #576971;
-}
 
 .cta .cta-btn {
   font-family: "Raleway", sans-serif;
@@ -1006,6 +1033,10 @@ section {
   margin: 10px;
   color: #fff;
   background: #009cea;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 
 .cta .cta-btn:hover {
@@ -1025,6 +1056,29 @@ section {
     justify-content: flex-end;
   }
 }
+
+
+/*--------------------------------------------------------------
+# Gratis Ongkir
+--------------------------------------------------------------*/
+#gratis-ongkir-1{
+  /* background-image: url("../img/team-bg.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/team-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 70px;
+  padding: 60px 0;
+}
+
+
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -1142,70 +1196,9 @@ section {
 
 .team .member .pic {
   overflow: hidden;
-  width: 100%;
-  height: 65vh;
-}
-
-.team .member .member-info {
-  position: absolute;
-  top: 85%;
-  left: 20px;
-  right: 20px;
-  background: #fff;
-  padding: 20px 0;
-  color: #364146;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  max-height: 95px;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
-}
-
-.team .member:hover .member-info {
-  max-height: 300px;
-}
-
-.team .member h4 {
-  font-weight: 700;
-  margin-bottom: 10px;
-  font-size: 16px;
-  color: #364146;
-  position: relative;
-  padding-bottom: 10px;
-}
-
-.team .member h4::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 1px;
-  background: #b5c1c6;
-  bottom: 0;
-  left: calc(50% - 25px);
-}
-
-.team .member span {
-  font-style: italic;
-  display: block;
-  font-size: 13px;
-}
-
-.team .member .social {
-  margin-top: 15px;
-}
-
-.team .member .social a {
-  transition: color 0.3s;
-  color: #627680;
-}
-
-.team .member .social a:hover {
-  color: #009cea;
-}
-
-.team .member .social i {
-  font-size: 16px;
-  margin: 0 2px;
+  /* max-width: 55%;
+  min-height: 80vh; */
+  display: inline;
 }
 
 @media (max-width: 992px) {

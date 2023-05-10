@@ -12,21 +12,21 @@
         <!-- Slide 1 -->
         <div class="carousel-item active">
           <div class="carousel-container">
-            <img src="assets/img/portfolio-details-1.jpg" class="" alt="">
+            <img src="assets/img/konten-slide/slide1.png" class="" alt="">
           </div>
         </div>
   
         <!-- Slide 2 -->
         <div class="carousel-item">
           <div class="carousel-container">
-            <img src="assets/img/portfolio-details-2.jpg" class="" alt="">
+            <img src="assets/img/konten-slide/slide2.png" class="" alt="">
           </div>
         </div>
   
         <!-- Slide 3 -->
         <div class="carousel-item">
           <div class="carousel-container">
-            <img src="assets/img/portfolio-details-3.jpg" class="" alt="">
+            <img src="assets/img/konten-slide/slide3.png" class="" alt="">
           </div>
         </div>
   
@@ -47,19 +47,25 @@
         <div class="row">
           <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
             <div class="content pt-4 pt-lg-0">
-              <h3>Learn more about us</h3>
-              <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p>
+              <h3 class="fst-italic">Dailyskincareeee Story</h3>
+              <br>
               <ul>
-                <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperd</li>
+                <li>
+                  <i class="bi bi-check-circle"></i>
+                  Dailyskincareeee hadir pada tahun 2020 di bulan April sebagai salah satu online shop yang menyediakan 
+                  berbagai macam produk brand kecantikan dari dalam maupun luar negeri. Kami juga menjamin semua produk 100% 
+                  Ori karena kami bagian dari reseller resmi.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> 
+                  Bedanya Dailyskincareeee dengan online shop yang lain adalah fitur gratis ongkir 0 rupiah via WhatsApp 
+                  dengan ketentuan minimal belanja tertentu sesuai wilayah pengirimannya.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> 
+                  Dailyskincareeee memiliki slogan “Selain Memenuhi Kebutuhan Skincare Harianmu, Kami Juga Memberikan Kemudahan”
+                </li>
               </ul>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate tera noden carma palorp mades tera.
-              </p>
             </div>
           </div>
           <div class="col-lg-6" data-aos="zoom-in">
@@ -361,35 +367,25 @@
 
         <div class="section-title" data-aos="fade-up">
           <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
         <div class="row">
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in">
-              <div class="pic"><img src="assets/img/testimonials/testimonials.jpeg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-              </div>
+              <div class="pic"><img src="assets/img/testimonials/testimoni-1.jpg" class="img-fluid" alt=""></div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="assets/img/testimonials/testimonials.jpeg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-              </div>
+              <div class="pic"><img src="assets/img/testimonials/testimoni-2.jpg" class="img-fluid" alt=""></div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="assets/img/testimonials/testimonials.jpeg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-              </div>
+              <div class="pic"><img src="assets/img/testimonials/testimoni-3.jpg" class="img-fluid" alt=""></div>
             </div>
           </div>
 
@@ -403,57 +399,44 @@
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>Clients</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Brand Unggulan</h2>
         </div>
 
         <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in">
-              <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+              <img src="assets/img/brand-unggulan/brand-1.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in" data-aos-delay="100">
-              <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+              <img src="assets/img/brand-unggulan/brand-2.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in" data-aos-delay="150">
-              <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+              <img src="assets/img/brand-unggulan/brand-3.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in" data-aos-delay="200">
-              <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+              <img src="assets/img/brand-unggulan/brand-4.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in" data-aos-delay="250">
-              <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+              <img src="assets/img/brand-unggulan/brand-5.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in" data-aos-delay="300">
-              <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo" data-aos="zoom-in" data-aos-delay="350">
-              <img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6" data-aos="zoom-in" data-aos-delay="400">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
+              <img src="assets/img/brand-unggulan/brand-6.png" class="img-fluid" alt="">
             </div>
           </div>
 
@@ -461,6 +444,24 @@
 
       </div>
     </section><!-- End Clients Section -->
+
+    
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in">
+          <div class="col-lg-9 text-center text-lg-start">
+            {{-- <h3>GRATIS ONGKOS KIRIM ?</h3> --}}
+            <h2>Apa aja sih syarat dan ketentuannya ?</h2>
+            <div class="col-lg-3 cta-btn-container text-center">
+              <a class="cta-btn align-middle" href="/gratis-ongkir">Gratis Ongkir</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
 
     {{-- <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing section-bg">

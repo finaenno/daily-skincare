@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\KategoriProdukAdminController;
 use App\Http\Controllers\Admin\ItemProdukController;
 use App\Http\Controllers\Admin\BrandProdukAdminController;
+use App\Http\Controllers\GratisOngkirController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +19,9 @@ use App\Http\Controllers\Admin\BrandProdukAdminController;
 
 Route::get('/', [HomeController::class, 'index'])
     ->name('home');
+
+Route::get('/gratis-ongkir', [GratisOngkirController::class, 'index'])
+    ->name('gratis-ongkir');
 
 Route::prefix('kategoriProduk')->name('kategoriProduk.')->group(function () {
     Route::get('/', [KategoriProdukAdminController::class, 'index'])->name('index');
